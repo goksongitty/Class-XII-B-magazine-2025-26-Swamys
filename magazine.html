@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch and Unlock</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: repeating-linear-gradient(
+        135deg,
+        #d6e5d8,
+        #d6e5d8 10px,
+        #c2ccc5 10px,
+        #c2ccc5 20px
+      );
+      color: #2f3e30;
+      font-family: 'Orbitron', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    iframe {
+      width: 90%;
+      max-width: 600px;
+      height: 340px;
+      margin-bottom: 20px;
+      border: 3px solid #4caf50;
+      border-radius: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #388e3c;
+    }
+    #magazineSection {
+      display: none;
+      margin-top: 30px;
+    }
+    #magazineSection iframe {
+      width: 90%;
+      height: 500px;
+      border: 2px solid #4caf50;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎬 Watch the Video Below</h1>
+  <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Instructional Video" allowfullscreen></iframe>
+  <p>Once you're done watching, click below:</p>
+  <button onclick="revealMagazine()">I've Watched the Video</button>
+
+  <div id="magazineSection">
+    <h2>🎉 Magazine Unlocked!</h2>
+    <iframe src="https://drive.google.com/file/d/1Zk4HlaMqBNhgWXneMHNXmgDeZBK67Xxo/preview" allowfullscreen></iframe>
+  </div>
+
+  <script>
+    function revealMagazine() {
+      document.getElementById('magazineSection').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
